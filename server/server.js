@@ -21,7 +21,6 @@ app.get('/books', async (req, res) => {
       description: item.description?.value || 'No description available'
     }));
 
-    // Shuffle and pick 5 random books
     const randomBooks = books.sort(() => 0.5 - Math.random()).slice(0, 5);
     res.json(randomBooks);
   } catch (error) {
