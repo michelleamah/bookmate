@@ -2,50 +2,55 @@
 @use "../../styles/partials/_variables.scss" as *;
 @use "../../styles/partials/_mixins.scss" as *;
 
-.BookSwiper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-  
-    .book-container {
-      margin-bottom: 1rem;
-  
-      img {
-        max-width: 300px;
-        max-height: 400px;
-        object-fit: contain;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-  
-      h2 {
-        margin-top: 10px;
-        font-size: 1.5rem;
-      }
-  
-      p {
-        margin-top: 5px;
-        font-size: 1rem;
-      }
-  
-      button {
-        margin-top: 10px;
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-  
-        &:hover {
-          background-color: #0056b3;
-        }
-      }
-    }
+.browse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: $background;
+  color: $primary-color;
+
+  &__discover {
+    font-family: 'montserrat-demi';
   }
-  
+
+  &__container {
+    margin-bottom: 1rem;
+  }
+
+  &__image {
+    max-width: 15.625rem;
+    max-height: 21.875rem; 
+    object-fit: contain;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto; 
+  }
+
+  &__title {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+
+  &__author {
+    margin-top: 5px;
+    font-size: 1rem;
+  }
+
+  &__button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.8rem;
+    background-color: $primary-color; 
+    color: $primary-accent;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    font-family: 'montserrat-light';
+
+    &:hover {
+      background-color: $secondary-color; 
+      color: $secondary-accent;
+  }
+}
+}

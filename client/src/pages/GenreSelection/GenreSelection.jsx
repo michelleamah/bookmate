@@ -20,11 +20,11 @@ const GenreSelection = () => {
   };
 
   return (
-    <div className="genre-selection">
-      <h1>Select a Genre to Discover Books</h1>
-      <div className="genre-list">
+    <div className="genre">
+      <h1 className="genre__title">Choose your next adventure...</h1>
+      <div className="genre__list">
         {genresList.map((genre) => (
-          <button key={genre.value} onClick={() => handleGenreClick(genre.value)} className="genre-button">
+          <button key={genre.value} onClick={() => handleGenreClick(genre.value)} className="genre__button">
             {genre.display}
           </button>
         ))}

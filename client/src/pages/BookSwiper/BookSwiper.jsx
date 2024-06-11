@@ -6,6 +6,7 @@ import './BookSwiper.scss';
 const BookSwiper = () => {
   const [index, setIndex] = useState(0);
   const [books, setBooks] = useState([]);
+  const [showMatchModal, setShowMatchModal] = useState(false); 
   const location = useLocation();
   const navigate = useNavigate();
   const { genre } = location.state || {};
@@ -38,21 +39,37 @@ const BookSwiper = () => {
     setIndex(index + 1);
   };
 
+  const handleWantToRead = () => {
+    setShowMatchModal(true); 
+  };
+
+  const handleCloseMatchModal = () => {
+    setShowMatchModal(false); 
+  };
+
   if (index >= books.length) {
     return <div className="BookSwiper">No more books to display for today. Come back tomorrow!</div>;
   }
 
   return (
-    <div className="BookSwiper">
-      <h1>Discover</h1>
+    <div className="browse">
+      <h1 className="browse__discover">Discover</h1>
       {books.length > 0 && (
-        <div className="book-container">
-          <img src={`http://covers.openlibrary.org/b/id/${books[index].cover_id}-L.jpg`} alt={books[index].title} />
-          <h2>{books[index].title}</h2>
-          <p>{books[index].author}</p>
-          <p>{books[index].description}</p>
-          <button onClick={handleSwipeLeft}>Not up my alley 💔</button>
-          <button onClick={handleSwipeRight}>Want to read ❤️</button>
+        <div className="browse__container">
+          <img className="browse__image" src={`http://covers.openlibrary.org/b/id/${books[index].cover_id}-L.jpg`} alt={books[index].title} />
+          <h2 className="browse__title">{books[index].title}</h2>
+          <p className="browse__author">{books[index].author}</p>
+          <button className="browse__button" onClick={handleSwipeLeft}>❌</button>
+          <button className="browse__button" onClick={handleWantToRead}>✔️</button>
+          {showMatchModal && (
+            <div className="modal">
+              <div className="modal__content">
+                <span className="modal__close" onClick={handleCloseMatchModal}>&times;</span>
+                <h2>It's a match! ❤️ </h2>
+                <p>You've matched with {books[index].title}!</p>
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>
