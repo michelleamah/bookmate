@@ -18,7 +18,7 @@ app.get('/books', async (req, res) => {
       title: item.title,
       author: item.authors?.[0].name || 'Unknown',
       cover_id: item.cover_id || '',
-      description: item.description?.value || 'No description available'
+      description: item.first_sentence?.[0] || 'No description available'
     }));
 
     const randomBooks = books.sort(() => 0.5 - Math.random()).slice(0, 5);
@@ -28,6 +28,7 @@ app.get('/books', async (req, res) => {
     res.status(500).send('Error fetching books');
   }
 });
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
