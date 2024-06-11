@@ -1,0 +1,36 @@
+.book-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .book-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .book-cover {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  .book-author, .book-sentence {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .book-author {
+    margin-bottom: 10px;
+  }
+  
+  .no-book {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ff0000;
+    margin-top: 20px;
+  }
+  
