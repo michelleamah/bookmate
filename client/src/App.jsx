@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import GenreSelection from './pages/GenreSelection/GenreSelection';
-import BookSwiper from './pages/BookSwiper/BookSwiper';
-import Bookshelf from './pages/Bookshelf/Bookshelf';
-import BookDetails from './pages/BookDetails/BookDetails';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Home from './pages/HomePage/HomePage';
+import GenreSelection from './pages/GenreSelection/GenreSelection.jsx';
+import BookSwiper from './pages/BookSwiper/BookSwiper.jsx';
+import Bookshelf from './pages/Bookshelf/Bookshelf.jsx';
+import BookDetails from './pages/BookDetails/BookDetails.jsx';
+import Header from './components/Header/Header.jsx';
+import Footer from './components/Footer/Footer.jsx';
+import Home from './pages/HomePage/HomePage.jsx';
 import './App.css';
 
 function App() {

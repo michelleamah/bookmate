@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, p {
+  margin: 0 0 10px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &.selected {
+    background-color: #005f5f;
+  }
+
+  &:hover {
+    background-color: #005f5f;
+  }
+}
+
+img {
+  max-width: 100px;
+  display: block;
+  margin: 10px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 10px;
+  }
+}
