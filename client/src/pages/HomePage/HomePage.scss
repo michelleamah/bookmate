@@ -1,33 +1,51 @@
+@use "../../styles/partials/_fonts.scss" as *;
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+
 .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/images/books.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-family: 'montserrat-bold';
+      color: $primary-color;
   }
-  
-  .home h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+  &__logo {
+    width: 100%;
+    height: auto;
+}
+
+  &__description {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: $primary-color;
+      font-family: 'montserrat-light';
+
   }
-  
-  .home p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
-  
-  .home button {
+
+  &__button {
     padding: 10px 20px;
     font-size: 1.2rem;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+    background: $background; 
+    color: $primary-color;
+    border-radius: 1.5rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'montserrat-demi';
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2); 
+      color: $primary-color;
+    }
   }
-  
-  .home button:hover {
-    background-color: #0056b3;
-  }
-  
+}

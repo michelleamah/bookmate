@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom';
 import './Header.scss';
-import logo from '../../assets/images/logo.png';
 
 const Header = () => {
   return (
     <header className="header">
       <div className="header__logo">
       <Link to="/">
-        <img src={logo} alt="Bookmate Logo" />
+        <h3>BookMate</h3>
       </Link>
     </div>
       <nav className="header__nav">

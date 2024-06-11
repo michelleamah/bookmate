@@ -6,7 +6,7 @@ import BookDetails from './pages/BookDetails/BookDetails.jsx';
 import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import Home from './pages/HomePage/HomePage.jsx';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (

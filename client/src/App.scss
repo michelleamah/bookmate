@@ -1,6 +1,11 @@
+@use "./styles/partials/_fonts.scss" as *;
+@use "./styles/partials/_variables.scss" as *;
+@use "./styles/partials/_mixins.scss" as *;
+
 .selected {
   background-color: #4CAF50;
   color: white;
+  font-family: 'montserrat-regular';
 }
 
 button {

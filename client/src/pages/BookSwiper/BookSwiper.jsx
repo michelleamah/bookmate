@@ -39,12 +39,12 @@ const BookSwiper = () => {
   };
 
   if (index >= books.length) {
-    return <div className="BookSwiper">No more books to display</div>;
+    return <div className="BookSwiper">No more books to display for today. Come back tomorrow!</div>;
   }
 
   return (
     <div className="BookSwiper">
-      <h1>Swipe through Books</h1>
+      <h1>Discover</h1>
       {books.length > 0 && (
         <div className="book-container">
           <img src={`http://covers.openlibrary.org/b/id/${books[index].cover_id}-L.jpg`} alt={books[index].title} />

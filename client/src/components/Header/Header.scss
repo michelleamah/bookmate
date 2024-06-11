@@ -1,14 +1,20 @@
+@use "../../styles/partials/_fonts.scss" as *;
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #F6F4F1;
+    background-color: $primary-color;
     padding: 10px 20px;
-    border-bottom: 1px solid #e7e7e7;
   
     &__logo {
       font-size: 1.5rem;
-      font-weight: bold;
+      font-family: 'montserrat-bold';
+  background: -webkit-linear-gradient(135deg, #007bff, #00ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
       img {
         width: 100%;
@@ -27,6 +33,7 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        font-family: 'montserrat-demi';
   
         li {
           margin-left: 20px;
