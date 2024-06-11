@@ -1,6 +1,6 @@
-# Book Recommender Application
+# Book Recommender Application - BookMate
 
-A Tinder-style book recommender application that allows users to swipe through book recommendations based on their chosen genre and save their favorite books to a virtual bookshelf.
+A Tinder-style book recommender application that allows users to like and dislike book recommendations based on their chosen genre and save their favourite books to a virtual bookshelf.
 
 ## Tech Stack Used
 
@@ -15,9 +15,9 @@ A Tinder-style book recommender application that allows users to swipe through b
 
 - **Home Page:** A simple page with a "Start Matching" button that navigates to the genre selection page.
 - **Genre Selection Page:** Allows users to select a genre from a list of genres.
-- **Book Swiper Page:** Displays 5 randomly selected books from the chosen genre in a Tinder-style swipe interface. Users can like or dislike books.
-- **Bookshelf Page:** Displays liked books on a virtual bookshelf. Clicking on a book shows its details.
-- **Book Details Page:** Displays details of a book including cover, title, author, and the first sentence.
+- **Book Swiper Page:** Displays 5 randomly selected books from the chosen genre in a Tinder-style swipe interface. Users can like or dislike books. A modal appears when a user "likes" a book, showing a book "match".
+- **Bookshelf Page:** Displays liked books on a virtual bookshelf. Clicking on a book shows its details. Users can also clear their bookshelf.
+- **Book Details Page:** Displays details of a book including cover and title. Users can also add a rating and a comment for each book.
 
 ## Usage Instructions
 
@@ -33,13 +33,18 @@ A Tinder-style book recommender application that allows users to swipe through b
 
 ### Book Swiper
 
-1. Swipe right to like a book and save it to your bookshelf.
-2. Swipe left to dislike a book and skip to the next one.
+1. Click the check to like a book and save it to your bookshelf.
+2. Click the x to dislike a book and skip to the next one.
 
 ### Bookshelf
 
 1. Visit the bookshelf page to see all the books you have liked.
 2. Click on a book to see its details.
+
+### Details
+
+1. Add a rating out of 5 stars to a book.
+2. Add a comment.
 
 ## Installation
 

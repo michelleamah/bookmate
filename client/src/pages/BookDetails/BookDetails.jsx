@@ -55,10 +55,10 @@ const BookDetails = () => {
           <h2>Comments</h2>
           <textarea className="books__box" value={comment} onChange={handleCommentChange} />
           <button className="books__button" onClick={handleAddComment}>Add Comment</button>
-          <ul>
+          <ul className="books__review">
             {comments.map((comment, index) => (
               <li key={index}>
-                {comment.text} - {comment.rating} ⭐️
+                {comment.rating} ⭐️ - {comment.text}
               </li>
             ))}
           </ul>

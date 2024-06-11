@@ -21,20 +21,20 @@ const Bookshelf = () => {
   };
 
   return (
-    <div className="bookshelf-container">
-      <h1>Bookshelf</h1>
-      <button onClick={handleClearBookshelf}>Clear Bookshelf</button>
-      <div className="bookshelf">
+    <div className="bookshelf">
+      <h1 className="bookshelf__title">Bookshelf</h1>
+      <div className="bookshelf__books">
         {books.map((book) => (
-          <div key={book.id} className="book" onClick={() => handleBookClick(book)}>
+          <div key={book.id} className="bookshelf__titles" onClick={() => handleBookClick(book)}>
             <img
               src={`https://covers.openlibrary.org/b/id/${book.cover_id}-L.jpg`}
               alt={book.title}
-              className="book-cover"
+              className="bookshelf__covers"
             />
           </div>
         ))}
       </div>
+      <button className="bookshelf__clear" onClick={handleClearBookshelf}>Clear Bookshelf</button>
     </div>
   );
 };

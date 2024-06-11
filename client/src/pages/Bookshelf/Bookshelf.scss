@@ -2,20 +2,27 @@
 @use "../../styles/partials/_variables.scss" as *;
 @use "../../styles/partials/_mixins.scss" as *;
 
-.bookshelf-container {
-  padding: 20px;
+.bookshelf {
+  padding: 1.25rem;
   text-align: center;
+  font-family: 'montserrat-demi';
 
-  .bookshelf {
+  &__books {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0.625rem;
     justify-content: center;
   }
 
-  .book {
-    padding: 10px;
-    width: 150px;
+  &__title {
+    background: -webkit-linear-gradient(135deg, #007bff, #00ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  &__titles {
+    padding: 0.625rem;
+    width: 9.375rem;
     cursor: pointer;
     text-align: center;
     overflow: hidden;
@@ -44,5 +51,21 @@
       font-size: 0.875rem;
       margin: 5px 0;
     }
+  }
+
+  &__clear {
+      padding: 0.625rem 1.25rem;
+      font-size: 1.2rem;
+      background: $background; 
+      color: $primary-color;
+      border-radius: 1.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-family: 'montserrat-demi';
+  
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2); 
+        color: $primary-color;
+      }
   }
 }

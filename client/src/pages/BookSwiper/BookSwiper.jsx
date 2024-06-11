@@ -6,7 +6,7 @@ import './BookSwiper.scss';
 const BookSwiper = () => {
   const [index, setIndex] = useState(0);
   const [books, setBooks] = useState([]);
-  const [showMatchModal, setShowMatchModal] = useState(false); 
+  const [showMatchModal, setShowMatchModal] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const { genre } = location.state || {};
@@ -28,27 +28,33 @@ const BookSwiper = () => {
     }
   }, [genre, navigate]);
 
-  const handleSwipeRight = () => {
-    const matchedBooks = JSON.parse(localStorage.getItem('matchedBooks')) || [];
-    matchedBooks.push(books[index]);
-    localStorage.setItem('matchedBooks', JSON.stringify(matchedBooks));
-    setIndex(index + 1);
-  };
-
   const handleSwipeLeft = () => {
     setIndex(index + 1);
   };
 
   const handleWantToRead = () => {
-    setShowMatchModal(true); 
+    const matchedBooks = JSON.parse(localStorage.getItem('matchedBooks')) || [];
+    matchedBooks.push(books[index]);
+    localStorage.setItem('matchedBooks', JSON.stringify(matchedBooks));
+    setShowMatchModal(true);
   };
 
   const handleCloseMatchModal = () => {
-    setShowMatchModal(false); 
+    setShowMatchModal(false);
+    setIndex(index + 1); 
+  };
+
+  const handleGoToBookshelf = () => {
+    navigate('/bookshelf');
   };
 
   if (index >= books.length) {
-    return <div className="BookSwiper">No more books to display for today. Come back tomorrow!</div>;
+    return (
+      <div className="bookswiper">
+        <p>No more books to display for today. Come back tomorrow!</p>
+        <button className="bookswiper__button" onClick={handleGoToBookshelf}>Go to Bookshelf 📚</button>
+      </div>
+    );
   }
 
   return (
@@ -61,15 +67,15 @@ const BookSwiper = () => {
           <p className="browse__author">{books[index].author}</p>
           <button className="browse__button" onClick={handleSwipeLeft}>❌</button>
           <button className="browse__button" onClick={handleWantToRead}>✔️</button>
-          {showMatchModal && (
-            <div className="modal">
-              <div className="modal__content">
-                <span className="modal__close" onClick={handleCloseMatchModal}>&times;</span>
-                <h2>It's a match! ❤️ </h2>
-                <p>You've matched with {books[index].title}!</p>
-              </div>
-            </div>
-          )}
+        </div>
+      )}
+      {showMatchModal && (
+        <div className="modal">
+          <div className="modal__content">
+            <span className="modal__close" onClick={handleCloseMatchModal}>&times;</span>
+            <h2>It's a match! ❤️</h2>
+            <p>You've matched with {books[index].title}!</p>
+          </div>
         </div>
       )}
     </div>

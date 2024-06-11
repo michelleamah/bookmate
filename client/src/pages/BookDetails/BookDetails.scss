@@ -19,13 +19,13 @@
     justify-content: space-between;
     align-items: flex-start;
     font-family: 'montserrat-regular';
-
   }
 
   &__flex {
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
+    margin-right: 3rem;
   }
 
   &__cover {
@@ -33,17 +33,19 @@
     height: auto;
     margin-bottom: 1.25rem;
     border-radius: 0.5rem;
+    margin-left: 7rem;
   }
 
   &__rating,
   &__comments {
     width: 100%; 
     text-align: left;
+    font-size: 0.8rem;
   }
 
   &__rating {
     border-bottom: 1px solid $secondary-color;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 
   }
 
@@ -78,6 +80,12 @@
   -webkit-text-fill-color: transparent;
   border: 1px solid black;
     }
+  }
+
+  &__review {
+    border-top: 1px solid $secondary-color;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
   }
 }
 
