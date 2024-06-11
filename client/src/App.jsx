@@ -5,8 +5,8 @@ import Bookshelf from './pages/Bookshelf/Bookshelf';
 import BookDetails from './pages/BookDetails/BookDetails';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Home from './pages/HomePage';
-import './App.scss';
+import Home from './pages/HomePage/HomePage';
+import './App.css';
 
 function App() {
   return (
