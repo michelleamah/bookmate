@@ -16,56 +16,54 @@
 
   &__title {
     background: -webkit-linear-gradient(135deg, #007bff, #00ffcc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  &__titles {
+  &__book {
     padding: 0.625rem;
     width: 9.375rem;
     cursor: pointer;
     text-align: center;
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column; 
 
     &:hover {
       border-color: #888;
     }
 
-    &:hover img {
+    &:hover .bookshelf__book-cover {
       transform: scale(1.05);
     }
 
-    img {
+    .bookshelf__book-cover {
       max-width: 100%;
       height: auto;
       transition: transform 0.3s ease;
     }
 
-    h3 {
+    .bookshelf__book-title {
       font-size: 1rem;
       margin: 10px 0;
     }
-
-    p {
-      font-size: 0.875rem;
-      margin: 5px 0;
-    }
   }
 
-  &__clear {
-      padding: 0.625rem 1.25rem;
-      font-size: 1.2rem;
-      background: $background; 
+  &__delete-button {
+    margin-top: auto; 
+    padding: 0.625rem 1.25rem;
+    font-size: 0.7rem;
+    background: $background; 
+    color: $primary-color;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'montserrat-demi';
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2); 
       color: $primary-color;
-      border-radius: 1.5rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      font-family: 'montserrat-demi';
-  
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.2); 
-        color: $primary-color;
-      }
+    }
   }
 }

@@ -21,6 +21,9 @@ A Tinder-style book recommender application that allows users to like and dislik
 
 ## Usage Instructions
 
+1. Run the server.
+2. Run the client.
+
 ### Home Page
 
 1. Visit the home page at `http://localhost:5173/`.

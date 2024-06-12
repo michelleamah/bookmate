@@ -15,9 +15,10 @@ const Bookshelf = () => {
     navigate('/details', { state: { book } });
   };
 
-  const handleClearBookshelf = () => {
-    localStorage.removeItem('matchedBooks');
-    setBooks([]);
+  const handleDeleteBook = (bookId) => {
+    const updatedBooks = books.filter((book) => book.id !== bookId);
+    setBooks(updatedBooks);
+    localStorage.setItem('matchedBooks', JSON.stringify(updatedBooks));
   };
 
   return (
@@ -25,16 +26,21 @@ const Bookshelf = () => {
       <h1 className="bookshelf__title">Bookshelf</h1>
       <div className="bookshelf__books">
         {books.map((book) => (
-          <div key={book.id} className="bookshelf__titles" onClick={() => handleBookClick(book)}>
-            <img
-              src={`https://covers.openlibrary.org/b/id/${book.cover_id}-L.jpg`}
-              alt={book.title}
-              className="bookshelf__covers"
-            />
+          <div key={book.id} className="bookshelf__book">
+            <div className="bookshelf__book-info" onClick={() => handleBookClick(book)}>
+              <img
+                src={`https://covers.openlibrary.org/b/id/${book.cover_id}-L.jpg`}
+                alt={book.title}
+                className="bookshelf__book-cover"
+              />
+              <span className="bookshelf__book-title">{book.title}</span>
+            </div>
+            <button className="bookshelf__delete-button" onClick={() => handleDeleteBook(book.id)}>
+              I've read this!
+            </button>
           </div>
         ))}
       </div>
-      <button className="bookshelf__clear" onClick={handleClearBookshelf}>Clear Bookshelf</button>
     </div>
   );
 };
