@@ -17,7 +17,7 @@
   &__title {
       font-size: 2.5rem;
       margin-bottom: 1.25rem;
-      font-family: 'montserrat-bold';
+      font-family: 'bold';
       color: $primary-color;
   }
   &__logo {
@@ -29,7 +29,7 @@
       font-size: 1.2rem;
       margin-bottom: 2rem;
       color: $primary-color;
-      font-family: 'montserrat-light';
+      font-family: 'light';
 
   }
 
@@ -41,7 +41,7 @@
     border-radius: 1.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    font-family: 'montserrat-demi';
+    font-family: 'demi';
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.2); 

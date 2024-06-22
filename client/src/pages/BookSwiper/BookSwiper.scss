@@ -13,7 +13,7 @@
   color: $primary-color;
 
   &__discover {
-    font-family: 'montserrat-demi';
+    font-family: 'demi';
   }
 
   &__container {
@@ -101,7 +101,7 @@
     cursor: pointer;
     border-radius: 0.5rem;
     transition: background-color 0.3s ease;
-    font-family: 'montserrat-regular';
+    font-family: 'regular';
     background-color: rgba(255, 255, 255, 0.2); 
 
     &:hover {
